@@ -83,7 +83,7 @@
 </div>        
 </section>
         <section id="proyectos">
-            <h3>࣪ ₊ ✶ ⭑ proyectos ࣪₊ ✶ ⭑ </h3>
+            <h3>࣪ ₊proyectos/participaciones✶ ⭑ </h3>
             <div class="cards">
                 <figure class="todoesoquesobra">
                     <a href="https://www.behance.net/gallery/254151673/GRID-Free-display-font" target="_blank">
@@ -248,23 +248,6 @@
             botonMenu.setAttribute('aria-label', 'Abrir menú');
         });
     });
-</script>
-
-<script>
-    const titulos = document.querySelectorAll('.titulo-animado');
-
-    const observador = new IntersectionObserver((entradas) => {
-        entradas.forEach(entrada => {
-            if (entrada.isIntersecting) {
-                entrada.target.classList.add('visible');
-                observador.unobserve(entrada.target);
-            }
-        });
-    }, {
-        threshold: 0.2
-    });
-
-    titulos.forEach(titulo => observador.observe(titulo));
 </script>
 
 </body>
