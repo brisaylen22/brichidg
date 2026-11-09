@@ -14,20 +14,30 @@
 </head>
 
 <body>
-    <header>
-        <div class="encabezado">
-            <nav>
-                <a href="index.html">PROYECTOS</a>
-                <a href="contacto.html">CONTACTO</a>
-                <a href="index.html" class="logo">
-                    <img src="img/footer-header/logo.svg" class="logo-base" alt="logo">
-                    <img src="img/footer-header/logoamarillo.svg" class="logo-hover" alt="logo">
-                </a>
-                <a href="formacion.html">FORMACIÓN</a>
-                <a href="experiencia.html">EXPERIENCIA</a>
-            </nav>
-        </div>
-    </header>
+<header>
+    <div class="encabezado">
+
+        <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <a href="index.html" class="logo">
+            <img src="img/footer-header/logo.svg" class="logo-base" alt="logo">
+            <img src="img/footer-header/logoamarillo.svg" class="logo-hover" alt="logo">
+        </a>
+
+        <nav id="menu">
+            <a href="index.html">HOME</a>
+            <a href="formacion.html">FORMACIÓN Y EXPERIENCIA</a>
+            <a href="contacto.html">CONTACTO</a>
+            <a href="https://www.behance.net/brichi" target="_blank" rel="noopener noreferrer">BEHANCE</a>
+            <a href="https://www.instagram.com/brichidg/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+        </nav>
+
+    </div>
+</header>
 
     <main>
         <section class="contactocontenedor">
@@ -53,7 +63,6 @@
                 <input type="submit" value="ENVIAR" formenctype="text/plain" class="enviar">
             </form>
         </article>
-        <span class="estrella">✧</span>
         </section>
     </main>
 
@@ -75,6 +84,29 @@
             <p>Realizado por Brisa Pereyra :)</p>
     </footer>
 
+<script>
+    const botonMenu = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('#menu');
+
+    botonMenu.addEventListener('click', () => {
+        const abierto = menu.classList.toggle('menu-abierto');
+
+        botonMenu.setAttribute('aria-expanded', abierto);
+        botonMenu.setAttribute(
+            'aria-label',
+            abierto ? 'Cerrar menú' : 'Abrir menú'
+        );
+    });
+
+    menu.querySelectorAll('a').forEach(enlace => {
+        enlace.addEventListener('click', () => {
+            menu.classList.remove('menu-abierto');
+            botonMenu.setAttribute('aria-expanded', false);
+            botonMenu.setAttribute('aria-label', 'Abrir menú');
+        });
+    });
+</script>
+    
 </body>
 
 </html>

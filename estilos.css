@@ -67,7 +67,7 @@ body {
 /*HEADER*/
 
 header {
-    background-color: #F87A63;
+    background-color: #F72B2B;
     padding: 10px 0;
     position: fixed;
     width: 100%;
@@ -96,9 +96,7 @@ a:hover {
 }
 
 .logo {
-    position: relative;
-    width: 50px;
-    height: 50px;
+    display: none;
 }
 
 .logo img {
@@ -154,7 +152,7 @@ footer img {
 h1 {
     font-family: 'Mango Extralight', "IBM Plex Sans", sans-serif;
     color: #000000;
-    font-size: clamp(17rem, 30vw, 40rem);
+    font-size: clamp(17rem, 30vw, 25rem);
     font-weight: 100;
     text-transform: uppercase;
 }
@@ -162,16 +160,16 @@ h1 {
 h2 {
     font-family: 'Mori Semibold', "IBM Plex Sans", sans-serif;
     color: #FEE69C;
-    font-size: 3.3rem;
+    font-size: 3rem;
     text-align: center;
     text-transform: uppercase;
 }
 
 h3 {
     font-family: 'Mango', "Climate Crisis", sans-serif;
-    color: #F87A63;
+    color: #F72B2B;
     font-size: 3.5rem;
-    line-height: 3rem;
+    line-height: 2.7rem;
 }
 
 h4 {
@@ -199,8 +197,8 @@ li {
 
 .cards h4 {
     font-family: 'Mango', "Climate Crisis", sans-serif;
-    font-size: 3.7rem;
-    color: #D32E05;
+    font-size: 2.8rem;
+    color: #000000;
 }
 
 .cards p {
@@ -214,7 +212,7 @@ li {
 
 span {
     font-weight: bold;
-    font-size: 1.17rem;
+    font-size: 1.5rem;
     display: block;
 }
 
@@ -225,6 +223,7 @@ span {
     text-transform: uppercase;
 }
 
+
 .formacion a,
 .experiencia a,
 .contacto a {
@@ -233,6 +232,7 @@ span {
     color: #FEE69C;
     text-decoration: none;
     padding-left: 30px;
+    text-align: right;
 }
 
 .formacion h4,
@@ -245,20 +245,21 @@ span {
     text-transform: uppercase;
     background-color: #FEE69C;
     padding: 35px 60px;
-    margin: 40px 0px;
+    font-size: 2.1rem;
+    margin: 0px 0px;
 }
 
 .formacionboton:hover h3,
 .experienciaboton:hover h3 {
-    background-color: #F87A63;
+    background-color: #F72B2B;
     color: #FEE69C;
     transition: .3s;
 }
 
 .contactoboton {
-    background-color: #F87A63;
+    background-color: #000000;
     display: flex;
-    height: 251px;
+    height: 170px;
     align-items: center;
     justify-content: center;
     margin: 60px;
@@ -270,12 +271,12 @@ span {
 }
 
 .contactoboton h3 {
-    color: #000000;
+    color: #FEE69C;
     transition: .3s;
 }
 
 .contactoboton:hover {
-    background-color: #D32E05;
+    background-color: #F72B2B;
 }
 
 .contactoboton:hover h3 {
@@ -292,6 +293,10 @@ span {
 .contacto p {
     color: #FEE69C;
     padding: 10px;
+}
+
+.contacto p {
+    margin-bottom: 30px;
 }
 
 .hero h1 {
@@ -334,10 +339,10 @@ span {
 
 .flechas {
     position: absolute;
-    bottom: 70px;
+    bottom: 23px;
     left: 50%;
     z-index: 4;
-    font-size: 2rem;
+    font-size: 1.3rem;
     text-decoration: none;
     color: #000000;
     animation: bajar 1.5s infinite;
@@ -365,22 +370,38 @@ span {
     align-items: center;
     justify-content: space-evenly;
     gap: 20px;
-    padding: 60px;
+    padding: 8px 60px 60px 60px;
+}
+
+.orbita {
+    position: relative;
+    width: 20wh;
+    height: 350px;
+    margin: 0 auto 30px;
+    left: 0;
 }
 
 .estrella {
-    font-size: 8rem;
-    color: #FEE69C;
-    animation: girar 5s linear infinite;
+    display: none;
 }
 
-@keyframes girar {
+.estrella {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 3rem;
+    color: #FEE69C;
+    animation: orbitar 5s linear infinite;
+    z-index: 3;
+}
+
+@keyframes orbitar {
     from {
-        transform: rotate(0deg);
+        transform: translate(-50%, -50%) rotate(0deg) translateX(159px);
     }
 
     to {
-        transform: rotate(360deg);
+        transform: translate(-50%, -50%) rotate(360deg) translateX(159px);
     }
 }
 
@@ -393,25 +414,22 @@ blockquote {
 .diseño {
     display: flex;
     flex-direction: column;
-    background: #D32E05;
-    padding: 60px 60px 60px 70px;
+    background: #F72B2B;
+    height: 100%;
+    max-width: none;
+    box-sizing: border-box;
+    padding: 40px;
     align-items: center;
-    line-height: 4rem;
-    width: 100%;
-    max-width: 900px;
-}
-
-.diseñocontenedor {
-    display: flex;
     justify-content: center;
-    margin: 10px 0px 60px;
+    text-align: center;
+    line-height: 4rem;
 }
 
 .descripcion {
     text-align: center;
-    color: #F87A63;
-    padding: 50px;
-    margin: auto;
+    color: #F72B2B3;
+    padding: 90px;
+    margin-top: 50px;
 }
 
 .formacionboton,
@@ -436,7 +454,7 @@ blockquote {
     display: flex;
     flex-direction: column;
     background-color: #FEE69C;
-    padding: 30px;
+    padding: 0px 30px 30px 30px;
 }
 
 .shot,
@@ -450,7 +468,7 @@ blockquote {
 .zzzeta {
     position: relative;
     width: 38vw;
-    max-width: 544px;
+    max-width: 400px;
     min-width: 260px;
 }
 
@@ -476,6 +494,10 @@ blockquote {
 .todoesoquesobra:hover .hover,
 .zzzeta:hover .hover {
     opacity: 1;
+}
+
+.diseñocontenedor {
+    display: none;
 }
 
 .imaginacion {
@@ -521,11 +543,16 @@ blockquote {
 .experiencia {
     display: flex;
     flex-direction: column;
-    background: #D32E05;
-    padding: 100px 50px 50px 50px;
+    background: #F72B2B;
+    padding: 0px 50px 50px 50px;
     min-height: calc(100vh + 150px);
     justify-content: space-evenly;
 }
+
+.formacion {
+    padding: 50px 50px 50px 50px;
+}
+
 
 .item-acontenedor,
 .item-bcontenedor,
@@ -581,7 +608,7 @@ blockquote {
 }
 
 form input {
-    background-color: #F87A63;
+    background-color: #F72B2B;
     width: 85vw;
     min-height: 0.4vh;
     max-width: 60vw;
@@ -619,10 +646,114 @@ form {
     height: auto;
 }
 
+.marquee {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.marquee-contenido {
+    display: flex;
+    width: max-content;
+    max-width: none;
+    animation: desplazamiento 25s linear infinite;
+    will-change: transform;
+}
+
+.marquee .resumen {
+    flex: 0 0 auto;
+    width: auto;
+    margin: 0;
+    padding-right: 40px;
+    white-space: nowrap;
+}
+
+@keyframes desplazamiento {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.descripcion p {
+    text-align: left;
+    padding-bottom: 120px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.marquee-descripcion {
+    width: calc(100% + 100px);
+    margin-left: -50px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    box-sizing: border-box;
+    background-color: #FEE69C;
+}
+
+.marquee-descripcion-contenido {
+    display: flex;
+    width: max-content;
+    animation: correr-descripcion 25s linear infinite;
+    will-change: transform;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.marquee-descripcion span {
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+@keyframes correr-descripcion {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.descripcion {
+    text-align: center;
+    color: #F72B2B;
+    padding: 140px 50px 0px 50px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
+
+
 /*MEDIA QUERIES*/
-/*me guié por los momentos donde las cosas dejaban de funcionar y los fui ajustando a partir de ahi, a ver si puede ser mas responsive aún*/
 
 @media screen and (max-width:760px) {
+
+    .estrella {
+        display: block;
+    }
+
+    .diseño {
+        border-radius: 50%;
+    }
 
     nav {
         gap: 30px;
@@ -649,17 +780,23 @@ form {
     .descripcion {
         display: flex;
         flex-direction: column;
-        text-align: center;
-        color: #F87A63;
+        color: #F72B2B;
         max-width: 1000px;
     }
 
     .diseñocontenedor {
-        margin: 10px 50px 60px;
-    }
-
-    .diseño {
-        padding: 40px;
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        border: 15px solid #000;
+        box-sizing: border-box;
+        margin: 0 auto 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        z-index: 2;
     }
 
     .resumen {
@@ -677,17 +814,23 @@ form {
         width: 60vw;
     }
 
-    .hero h1 {
-        text-align: start;
-        padding: 26px;
-        line-height: 15rem;
-        font-size: 19.5rem;
-    }
+.hero h1 {
+    position: absolute;
+    top: calc(50% + 25px);
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 26px;
+    text-align: start;
+    line-height: 15rem;
+    font-size: 19.5rem;
+}
 
     h2 {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
         line-height: 2.4rem;
-        padding: 40px 0px;
+        padding: 15px 0px;
     }
 
     h3 {
@@ -731,7 +874,11 @@ form {
     .contacto a {
         font-family: 'Mango', "Climate Crisis", sans-serif;
         font-size: 2rem;
-        color:#F87A63;
+        color: #F72B2B;
+    }
+
+    .experiencia {
+        background: #FEE69C;
     }
 
     .item-acontenedor,
@@ -742,7 +889,12 @@ form {
     .item-2contenedor {
         padding: 20px 0px;
         margin: 0px;
-        background:#D32E05;
+        background: #F72B2B;
+    }
+
+    .item-1contenedor,
+    .item-2contenedor {
+        background: #FEE69C;
     }
 
     .formacion h3,
@@ -750,16 +902,24 @@ form {
         padding: 0px;
     }
 
-    .experiencia p,
     .formacion p,
-    .experiencia li,
     .formacion h4,
-    .experiencia h4,
     .formacion h5,
+    .formacion h4 {
+        color: #FEE69C;
+    }
+
+    .experiencia p,
+    .experiencia li,
+    .experiencia h4,
     .experiencia h5,
-    .formacion h4,
     .experiencia h4 {
-        color:#FEE69C;
+        color: #F72B2B;
+    }
+
+    .experiencia h5,
+    .formacion h5 {
+        font-size: 1.6rem;
     }
 
     .item-1,
@@ -772,7 +932,7 @@ form {
     }
 
     blockquote {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .animaciones {
@@ -801,15 +961,170 @@ form {
 
     .tns-controls button {
         all: unset;
-        width: 55px;
-        height: 55px;
+        width: 20px;
+        height: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.7rem;
-        color: #FEE69C;
-        background-color: #D32E05;
+        font-size: 1.5rem;
+        color: #000000;
+        padding-top: 0px;
     }
+
+#proyectos .cards figure {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+#proyectos .cards figure.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* IMAGEN A COLOR AL INTERACTUAR */
+
+#proyectos .hover {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#proyectos .cards figure:active .hover {
+    opacity: 1;
+}
+
+/* MENU HAMBURGUESA */
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    margin: 0;
+
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2.5px;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    flex-shrink: 0;
+    transition:
+        transform 0.35s cubic-bezier(0.65, 0, 0.35, 1),
+        opacity 0.2s ease,
+        width 0.35s ease;
+}
+
+/* ANIMACIÓN DEL MENÚ */
+
+.menu-toggle span:nth-child(1) {
+    transform-origin: center;
+}
+
+.menu-toggle span:nth-child(2) {
+    transform-origin: center;
+}
+
+.menu-toggle span:nth-child(3) {
+    transform-origin: center;
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* LOGO A LA DERECHA */
+
+.encabezado {
+    min-height: 55px;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.encabezado > a.logo img {
+    width: 45px;
+    height: auto;
+}
+
+header {
+    padding: 5px 0;
+}
+
+.encabezado > a.logo {
+    display: block;
+    position: relative;
+    top: 0px;
+    width: 45px;
+    height: 45px;
+    margin: 0 0 0 auto;
+    padding: 0;
+    flex-shrink: 0;
+    padding: 0;
+}
+
+.encabezado > a.logo img {
+    vertical-align: middle;
+}
+
+/* MENÚ DESPLEGABLE */
+
+.encabezado nav {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 25px;
+    padding: 30px 25px;
+    background-color: #FEE69C;
+    text-align: right;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-12px);
+    transition:
+        opacity 0.3s ease,
+        transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        visibility 0.3s;
+}
+
+.encabezado nav.menu-abierto {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.encabezado nav a {
+    width: 100%;
+    text-align: left;
+    font-size: 2rem;
+}
+
 }
 
 @media screen and (max-width:450px) {
@@ -826,9 +1141,9 @@ form {
         height: 35px;
     }
 
-    .hero h1{
-    font-size: 18rem;
-    line-height: 14rem;
+    .hero h1 {
+        font-size: 18rem;
+        line-height: 14rem;
     }
 
 }
@@ -843,8 +1158,7 @@ form {
         font-size: 1.1rem;
     }
 
-    .hero h1{
-    font-size: 16rem;
-    line-height: 13rem;
-    }
-}
+    .hero h1 {
+        font-size: 16rem;
+        line-height: 13rem;
+    } }
