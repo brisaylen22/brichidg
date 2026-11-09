@@ -188,7 +188,7 @@ h5 {
 
 p,
 li {
-    list-style: none;
+    list-style: circle;
     font-size: 1rem;
     line-height: 1.6rem;
     text-wrap: balance;
@@ -741,11 +741,43 @@ form {
     transition: 0.3s;
 }
 
+/* CUADRADO DESKTOP */
 
+.diseño-desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2vh 0;
+}
+
+.cuadrado-desktop {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:#F72B2B;
+    padding-bottom: 60px;
+}
+
+.cuadrado-desktop h2 {
+    max-width: 100%;
+        color:#F72B2B;
+}
+
+.cuadrado-desktop p {
+    max-width: 100%;
+}
 
 /*MEDIA QUERIES*/
 
 @media screen and (max-width:760px) {
+
+.diseño-desktop {
+    display: none;
+}
 
     .estrella {
         display: block;
@@ -823,8 +855,8 @@ form {
     box-sizing: border-box;
     padding: 26px;
     text-align: start;
-    line-height: 15rem;
-    font-size: 19.5rem;
+line-height: 13rem;
+font-size: 17rem;
 }
 
     h2 {
@@ -865,7 +897,7 @@ form {
     }
 
     .contactoboton {
-        padding: 40px;
+        padding: 30px;
         text-align: center;
     }
 
@@ -1141,10 +1173,18 @@ header {
         height: 35px;
     }
 
-    .hero h1 {
-        font-size: 18rem;
-        line-height: 14rem;
-    }
+.hero h1 {
+    font-size: 16rem;
+    line-height: 13rem;
+}
+
+.contactoboton h3 {
+    font-size: 2.3rem;
+}
+
+.contactoboton {
+    padding: 0px;
+}
 
 }
 
@@ -1158,7 +1198,56 @@ header {
         font-size: 1.1rem;
     }
 
-    .hero h1 {
-        font-size: 16rem;
-        line-height: 13rem;
-    } }
+.hero h1 {
+    font-size: 14rem;
+    line-height: 12rem;
+}
+
+.diseñocontenedor .diseño {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.diseñocontenedor {
+    width: 250px;
+    height: 250px;
+    min-width: 250px;
+    min-height: 250px;
+    max-width: 250px;
+    max-height: 250px;
+    flex: 0 0 250px;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.diseñocontenedor h2 {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+}
+
+.diseñocontenedor p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+}
+
+.diseñocontenedor {
+    margin-top: 48px;
+    margin-bottom: 70px;
+} }
+
+@keyframes orbitar {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(109px);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(109px);
+    }
+}
+
+@media screen and (max-width:300px) {
+.hero h1 {
+    font-size: 13rem;
+    line-height: 10rem;}
+}
