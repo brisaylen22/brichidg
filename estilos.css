@@ -395,16 +395,6 @@ span {
     z-index: 3;
 }
 
-@keyframes orbitar {
-    from {
-        transform: translate(-50%, -50%) rotate(0deg) translateX(159px);
-    }
-
-    to {
-        transform: translate(-50%, -50%) rotate(360deg) translateX(159px);
-    }
-}
-
 blockquote {
     font-size: 1.8rem;
     color: #FEE69C;
@@ -1157,6 +1147,16 @@ header {
     font-size: 2rem;
 }
 
+@keyframes orbitar {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(160px);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(160px);
+    }
+}
+
 }
 
 @media screen and (max-width:450px) {
@@ -1199,8 +1199,8 @@ header {
     }
 
 .hero h1 {
-    font-size: 14rem;
-    line-height: 12rem;
+    font-size: 180px;
+    line-height: 150px;
 }
 
 .diseñocontenedor .diseño {
@@ -1235,7 +1235,7 @@ header {
 .diseñocontenedor {
     margin-top: 48px;
     margin-bottom: 70px;
-} }
+} 
 
 @keyframes orbitar {
     from {
@@ -1248,6 +1248,10 @@ header {
 
 @media screen and (max-width:300px) {
 .hero h1 {
-    font-size: 13rem;
-    line-height: 10rem;}
+    font-size: 160px;
+    line-height: 140px;
+}
+
+
+
 }
